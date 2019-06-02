@@ -1,10 +1,11 @@
 class ReviewsController < ApplicationController
   before_action :set_review, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /reviews
   # GET /reviews.json
   def index
-    @reviews = Review.all
+    @reviews = Review.all.page(params[:page])
   end
 
   # GET /reviews/1
@@ -21,6 +22,8 @@ class ReviewsController < ApplicationController
   # GET /reviews/1/edit
   def edit
   end
+
+  
 
   # POST /reviews
   # POST /reviews.json
@@ -70,6 +73,6 @@ class ReviewsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def review_params
-      params.require(:review).permit(:title, :author, :review, :review_id)
+      params.require(:review).permit(:title, :author, :review, :review_id, :user_id)
     end
 end

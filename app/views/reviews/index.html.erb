@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Reviews</h1>
+<div class="well"><h1>Reviews</h1>
 
 <table>
   <thead>
@@ -16,7 +16,7 @@
     <% @reviews.each do |review| %>
       <tr>
         <td><%= review.title %></td>
-        <td><%= review.author %></td>
+        <td><%= review.user.username %></td>
         <td><%= review.review %></td>
         <td><%= link_to 'Show', review %></td>
         <td><%= link_to 'Edit', edit_review_path(review) %></td>
@@ -25,6 +25,15 @@
     <% end %>
   </tbody>
 </table>
+
+</div>
+
+</div>
+    </div>
+  </div>
+
+
+<%= paginate @reviews %>
 
 <br>
 

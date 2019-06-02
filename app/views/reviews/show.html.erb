@@ -7,13 +7,17 @@
 
 <p>
   <strong>Author:</strong>
-  <%= @review.author %>
+  <%= @review.user.username %>
 </p>
 
 <p>
   <strong>Review:</strong>
   <%= @review.review %>
 </p>
+
+<p>
+ 
+</p> 
 
 <p>
     <%= link_to 'Edit', edit_review_path(@review) %>

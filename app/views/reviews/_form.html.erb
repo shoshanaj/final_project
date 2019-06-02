@@ -11,19 +11,23 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :author %>
-    <%= form.text_field :author %>
+    <%= form.text_field :author, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
+    <%= form.hidden_field :user_id, value: current_user.id, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
     <%= form.label :review %>
-    <%= form.text_area :review %>
+    <%= form.text_area :review, class: "form-control" %>
   </div>
 
   <div class="actions">
