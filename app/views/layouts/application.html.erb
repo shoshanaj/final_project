@@ -9,8 +9,8 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <body>
+  
+ <body>
  <nav class="navbar navbar-default">
    <div class="container-fluid">
      <!-- Brand and toggle get grouped for better mobile display -->
@@ -22,10 +22,11 @@
          <span class="icon-bar"></span>
        </button>
        <%= link_to "Home", root_path, class: "navbar-brand" %>
+       <%= link_to "My Reviews", root_path, class: "navbar-text" %>
+       <%= link_to "My Favorites", root_path, class: "navbar-text" %>
      </div>
      <!-- Collect the nav links, forms, and other content for toggling -->
      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-       <ul class="nav navbar-nav">
        <ul class="nav navbar-nav navbar-right">
          <% if user_signed_in? %>
            <li class="dropdown">
@@ -47,15 +48,15 @@
     <div class="container">
 
       <div class="jumbotron">
-    <h1>SomethingReads</h1>  
-  </div>
-  <p>This is some text.</p> 
-  <p>This is another text.</p> 
-</div>
- <%= yield %>
+        <%= image_tag "boyreading.png", class: "jumbotron-image" %>
+        <div class="jumbotron-title">
+          <h1><span class="accent-pink">Power</span><span class="accent-yellow">Reads</span></h1>  
+          <p class="accent-blue">When you just can't put it down.</p>
+        </div>
+      </div> 
+      
+      <%= yield %>
     </div>
-</body>
 
-  
   </body>
 </html>

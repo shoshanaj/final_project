@@ -17,3 +17,81 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+
+body {
+	background-color: #f5f3ea;
+}
+
+a:hover {
+	background-color: transparent;
+	color: #43c0f6;
+}
+
+a,
+.navbar-default .navbar-text,
+a:visited {
+	color: #f5ce28;
+}
+
+a .glyphicon {
+	color: #f81b84
+}
+
+.navbar-default {
+	background-color: #f2eee2;
+}
+
+.container .jumbotron {
+	padding: 0px;
+
+}	
+
+.jumbotron-image {
+	float: left;
+}
+
+.jumbotron-title {
+	padding-bottom: 32px;
+	padding-top: 31px;
+	margin-left: 195px;
+}
+
+.accent-pink {
+	color: #f81b84;
+}
+
+.accent-yellow {
+	color: #f5ce28;
+}
+
+.accent-blue {
+	color: #43c0f6;
+}
+
+.jumbotron {
+	background-color: #f2eee2;
+
+}
+
+.book-title {
+	font-weight: bold;
+}
+
+.reviewed-by {
+	padding-left: 18px
+}
+
+.short-review {
+	margin-top: 10px;
+}
+
+.review-avatar {
+	margin-left: -40px;
+	margin-top: -40px;
+}
+
+.timeline-review {
+	margin-top: 30px;
+
+
+}
